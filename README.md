@@ -1,6 +1,5 @@
 Arduino MCP2515 CAN interface library
 ---------------------------------------------------------
-[![Build Status](https://travis-ci.org/autowp/arduino-mcp2515.svg?branch=master)](https://travis-ci.org/autowp/arduino-mcp2515)
 
 <br>
 CAN-BUS is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools and as an automotive diagnostic bus. This CAN-BUS Shield gives your Arduino/Seeeduino CAN-BUS capibility. With an OBD-II converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device or data logger.
@@ -29,13 +28,13 @@ CAN-BUS is a common industrial bus because of its long travel distance, medium c
 
 The following code samples uses the CAN-BUS Shield, wired up as shown:
 
-![MCP2515 CAN-Shield wiring](examples/wiring.png)
+![MCP2515 CAN-Shield wiring](pictures/wiring.png)
 
 ## Do It Yourself
 
 If you want to make your own CAN board for under $10, you can achieve that with something like this:
 
-![MCP2515 with MCP2551 wiring](examples/wiring-diy.png)
+![MCP2515 with MCP2551 wiring](pictures/wiring-diy.png)
 
 Component References:
 * [MCP2515](https://www.microchip.com/wwwproducts/en/MCP2515) Stand-Alone CAN Controller with SPI Interface
@@ -46,11 +45,16 @@ Component References:
 
 # Software Usage:
 
-## Library Installation
+## Library Compilation (CMake)
 
-1. Download the ZIP file from https://github.com/autowp/arduino-mcp2515/archive/master.zip
-2. From the Arduino IDE: Sketch -> Include Library... -> Add .ZIP Library...
-3. Restart the Arduino IDE to see the new "mcp2515" library with examples
+```
+$ git clone https://github.com/richardwei6/arduino-mcp2515-firmata.git
+$ cd remote-wiring/
+$ mkdir build
+$ cd build/
+$ cmake ..
+$ make
+```
 
 ## Initialization
 
